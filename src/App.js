@@ -1,23 +1,47 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { setContractName } from './decodeLogs';
 
 function App() {
+  const [ TxnLogs,  setTxnLogs ] = useState([]);
+  const [ hash,  setHash ] = useState('');
+
+  const getData = async (hash) => {
+    let decodeData = await setContractName(hash)
+    console.log("result")
+    console.log(decodeData)
+
+    setTxnLogs(decodeData)
+  }
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+
+    if(hash){
+      console.log(hash);
+      getData(hash)
+
+      setHash("");
+    }
+  }
+  
+  const handleOnChange = (e) => {
+    setHash(e.target.value);
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <form onSubmit={handleOnSubmit}>
+          <input placeholder='Hash..' className='hashBox' value={hash} onChange={handleOnChange}/>
+        </form>
+      </div>
+      <div className='resultArea'>
+        {TxnLogs && TxnLogs.length > 0 && TxnLogs.map((log) => 
+           <div>Contract address : { JSON.stringify(log['value'])}</div>
+        )}
+      </div>
     </div>
   );
 }
