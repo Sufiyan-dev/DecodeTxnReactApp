@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { setContractName } from './decodeLogs';
+import Card from './Components/Card';
 
 function App() {
   const [ TxnLogs,  setTxnLogs ] = useState([]);
@@ -37,10 +38,14 @@ function App() {
           <input placeholder='Hash..' className='hashBox' value={hash} onChange={handleOnChange}/>
         </form>
       </div>
+
       <div className='resultArea'>
+        <div>Result</div>
+        <div>
         {TxnLogs && TxnLogs.length > 0 && TxnLogs.map((log) => 
-           <div>Contract address : { JSON.stringify(log['value'])}</div>
+           <Card {...TxnLogs}/>
         )}
+        </div>
       </div>
     </div>
   );
