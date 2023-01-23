@@ -278,7 +278,7 @@ async function getContractNameAndSymbol(address) {
 async function setContractName(hash){
     let result = []
     let decodeData = await getlogsOfTxn(hash)
-   
+    console.log("log",decodeData)
     
     
     for(let i = 0; i < decodeData.length; i++){

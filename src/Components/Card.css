@@ -1,8 +1,16 @@
 .card {
-    background-color: skyblue;
+    /* background-color: skyblue; */
     display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 20px;
 }
 
-.contract-section {
+/* .contract-section {
     background-color: aliceblue;
+} */
+
+.Values-section > .value-div {
+    margin: 10px 0px 0px 0px;
 }

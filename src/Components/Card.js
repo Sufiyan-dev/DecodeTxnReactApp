@@ -2,30 +2,23 @@ import React, {useState} from 'react';
 import './Card.css';
 
 
-const card = ({contractAddress, contractName, contractSymbol, value}) => {
+const card = (prop) => {
 
-    // const backgroundCard = {
-    //     backgroundColor: 'skyblue',
-    //     display: 'flex',
-    //     flexDirection: 'column'
-    // }
-
-    // const contractDiv = {
-    //     border: 'black solid 1px'
-    // }
-
-
-
+    let stringValueArray = JSON.stringify(prop.data.value).slice(1,-1).replace(/"/g,' ').split(",")
     return (
         <div className='card'>
             <div className='contract-section'>
-                <div className='cAddress'>{contractAddress}</div>
-                <div>{contractName}</div>
-                <div>{contractSymbol}</div>
+                <div className='cAddress'><b>Contract address : </b>{prop.data['contract-address']}</div>
+                <div><b>Contract name : </b>{prop.data['contract-name']}</div>
+                <div><b>Contract symbol : </b>{prop.data['contract-symbol']}</div>
             </div>
             <div className='Values-section'>
-                <div>Value</div>
-                <div>{value}</div>
+                <div><b>Data</b></div>
+                <div>
+                {stringValueArray.map((ele, i) => 
+                    <div key={i} className="value-div">{ele}</div>
+                )}
+                </div>
             </div>
         </div>
     )

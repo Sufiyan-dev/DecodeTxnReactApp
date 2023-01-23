@@ -1,0 +1,47 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FC466B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+    position: absolute;
+    width: 100%;    
+    justify-content: space-around;
+}
+
+
+.formArea {
+    /* border: 1px solid black; */
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input {
+    height: 40px;
+    background-color: transparent;
+    /* border-bottom: 1px solid black; */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+::placeholder {
+    color: rgb(60, 60, 60);
+    opacity: 1; /* Firefox */
+  }
+
+/* .resultArea {
+    width: 70%;
+    /* border: 1px solid black; 
+} */
+
+/* .resultArea > .txnArea {
+    width: 60%;
+    position: absolute;
+} */
