@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className='header-section'>
         <h1>Decode Txn</h1>
         <p className='note-para'>NOTE: Currenlty this app decodes only 1inch contracts transactions. Link to 1inch contract <a href='https://etherscan.io/address/0x1111111254eeb25477b68fb85ed929f73a960582' target="_blank">LINK</a></p>
       </div>
