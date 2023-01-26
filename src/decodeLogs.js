@@ -275,7 +275,7 @@ async function getContractNameAndSymbol(address) {
 }
 
 
-async function setContractName(hash){
+export async function setContractName(hash){
     let result = []
     let decodeData = await getlogsOfTxn(hash)
     console.log("log",decodeData)
@@ -304,4 +304,4 @@ async function setContractName(hash){
 // })
 
 
-module.exports = {setContractName}
+// module.exports = setContractName
