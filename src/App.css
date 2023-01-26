@@ -5,8 +5,8 @@
     background: #FC466B;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 100%;
-    position: absolute;
+    min-height: 820px;
+    position: relative;
     width: 100%;    
     justify-content: space-around;
 }
@@ -28,13 +28,20 @@ input {
     border-top: none;
     border-left: none;
     border-right: none;
+    border-color: black;
     outline: none;
 }
 
 ::placeholder {
     color: rgb(60, 60, 60);
     opacity: 1; /* Firefox */
-  }
+}
+
+.note-para > a {
+    font-size: larger;
+    text-decoration: none;
+    color: black;
+}
 
 /* .resultArea {
     width: 70%;

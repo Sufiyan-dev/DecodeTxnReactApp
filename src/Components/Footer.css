@@ -1,3 +1,9 @@
-/* .footer-main {
-    border: 1px solid black
-} */
+.footer-main {
+    margin: 50px 0px;
+}
+
+.info-para > a {
+    color: black;
+    text-decoration:dashed;
+    font-size: larger;
+}
