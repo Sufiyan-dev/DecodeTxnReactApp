@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DecodeTxnReactApp/static/css/main.f1913676.css",
+    "main.js": "/DecodeTxnReactApp/static/js/main.ff5f371a.js",
+    "index.html": "/DecodeTxnReactApp/index.html",
+    "main.f1913676.css.map": "/DecodeTxnReactApp/static/css/main.f1913676.css.map",
+    "main.ff5f371a.js.map": "/DecodeTxnReactApp/static/js/main.ff5f371a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1913676.css",
+    "static/js/main.ff5f371a.js"
+  ]
+}
